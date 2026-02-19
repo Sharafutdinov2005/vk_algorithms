@@ -7,7 +7,8 @@ def reverse_array(
     end: Optional[int] = None
 ) -> None:
     """
-    Reverses array elements order from start to end.
+    Reverses array elements order from start to end. Start and end
+    must be in range from 0 to n, and start must be less, than end.
 
     Function makes n // 2 constant operations in worst case
     (from 0 to n // 2 index in given array).
@@ -42,6 +43,7 @@ def reverse_array_part(
 ) -> None:
     """
     Makes cycle move of array on k elements from right to left.
+    k must be positive number.
 
     It makes 3 * O(n) operations using `reverse_array` function,
     it doesn't allocate any memory.
