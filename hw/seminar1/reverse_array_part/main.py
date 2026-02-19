@@ -11,8 +11,12 @@ def reverse_array(
 
     Function makes n // 2 constant operations in worst case
     (from 0 to n // 2 index in given array).
+    Lists are muttable, so it does't copy them. It swaps elements
+    inside of the array without any additional memory allocation,
+    so it's in-place.
 
-    Complexity: O(n).
+    TC: O(n)
+    MC: O(1)
     """
 
     start = 0 if start is None else start
@@ -39,9 +43,11 @@ def reverse_array_part(
     """
     Makes cycle move of array on k elements from right to left.
 
-    It makes 3 * O(n) operations using `reverse_array` function.
+    It makes 3 * O(n) operations using `reverse_array` function,
+    it doesn't allocate any memory.
 
-    Complexity: O(n)
+    TC: O(n)
+    MC: O(1)
     """
 
     if k < 0:
