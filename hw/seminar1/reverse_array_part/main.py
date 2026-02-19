@@ -24,6 +24,8 @@ def reverse_array(
     end = len(array) if end is None else end
 
     # input validation
+    if len(array) == 0:
+        raise ValueError("array is empty!")
     if start < 0 or start >= len(array):
         raise ValueError("start is out of range!")
     if end < 0 or end > len(array):
@@ -43,7 +45,7 @@ def reverse_array_part(
 ) -> None:
     """
     Makes cycle move of array on k elements from right to left.
-    k must be positive number.
+    k must be positive number, array mustn't be empty.
 
     It makes 3 * O(n) operations using `reverse_array` function,
     it doesn't allocate any memory.
@@ -52,6 +54,9 @@ def reverse_array_part(
     MC: O(1)
     """
 
+    # input validation
+    if len(array) == 0:
+        raise ValueError("array is empty!")
     if k < 0:
         raise ValueError("k can't be negative!")
 
