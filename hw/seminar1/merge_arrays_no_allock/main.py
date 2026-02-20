@@ -5,6 +5,12 @@ def merge_arrays_no_allock(
     src: List[int],
     dest: List[int]
 ) -> None:
+    """
+    Merges `src` and `dest` lists in one `dest`. Takes two sorted in
+    increasing order lists, `dest` must be longer than `src`.
+
+    Note: last `len(src)` elements in `dest` will be overwritten.
+    """
 
     if len(src) > len(dest):
         raise ValueError("there is no space in dest!")
