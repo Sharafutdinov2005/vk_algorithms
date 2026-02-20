@@ -31,7 +31,7 @@ def reverse_array(
 
 def reverse_array_part(
     array: List[Any],
-    k: int,
+    k: int
 ) -> None:
     """
     Makes cycle move of array on k elements from right to left.
