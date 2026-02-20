@@ -27,3 +27,7 @@ def test_merge_arrays():
     tmp = [2, 5, 0]
     merge_arrays_no_allock([1], tmp)
     assert tmp == [1, 2, 5]
+
+    tmp = [2, 4, 5, 0, 0, 0, 0]
+    merge_arrays_no_allock([-1, 1, 3, 6], tmp)
+    assert tmp == [-1, 1, 2, 3, 4, 5, 6]
