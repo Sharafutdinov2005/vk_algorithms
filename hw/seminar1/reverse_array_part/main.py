@@ -9,21 +9,11 @@ def reverse_array(
     """
     Reverses array elements order from start to end. Start and end
     must be in range from 0 to n, and start must be less, than end.
-
-    Function makes n // 2 constant operations in worst case
-    (from 0 to n // 2 index in given array).
-    Lists are muttable, so it does't copy them. It swaps elements
-    inside of the array without any additional memory allocation,
-    so it's in-place.
-
-    TC: O(n)
-    MC: O(1)
     """
 
     start = 0 if start is None else start
     end = len(array) if end is None else end
 
-    # input validation
     if len(array) == 0:
         raise ValueError("array is empty!")
     if start < 0 or start >= len(array):
@@ -46,15 +36,8 @@ def reverse_array_part(
     """
     Makes cycle move of array on k elements from right to left.
     k must be positive number, array mustn't be empty.
-
-    It makes 3 * O(n) operations using `reverse_array` function,
-    it doesn't allocate any memory.
-
-    TC: O(n)
-    MC: O(1)
     """
 
-    # input validation
     if len(array) == 0:
         raise ValueError("array is empty!")
     if k < 0:
