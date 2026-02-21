@@ -49,3 +49,7 @@ def test_sort():
     tmp = [0, 2, 1]
     sort_ternary(tmp)
     assert tmp == [0, 1, 2]
+
+    tmp = [2, 0, 1, 0]
+    sort_ternary(tmp)
+    assert tmp == [0, 0, 1, 2]
