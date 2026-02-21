@@ -8,11 +8,10 @@ def move_even(
     Moves even nums into begining of array.
     """
 
-    left, right = 0, len(array)-1
+    ptr_even, ptr = 0, 0
 
-    while left < right:
-        if array[left] % 2 == 1:
-            array[left], array[right] = array[right], array[left]
-            right -= 1
-        else:
-            left += 1
+    while ptr < len(array):
+        if array[ptr] % 2 == 0:
+            array[ptr_even], array[ptr] = array[ptr], array[ptr_even]
+            ptr_even += 1
+        ptr += 1

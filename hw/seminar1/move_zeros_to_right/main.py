@@ -8,11 +8,10 @@ def move_zeros(
     Moves 0 into end of array.
     """
 
-    left, right = 0, len(array)-1
+    ptr_positive, ptr = 0, 0
 
-    while left < right:
-        if array[left] == 0:
-            array[left], array[right] = array[right], array[left]
-            right -= 1
-        else:
-            left += 1
+    while ptr < len(array):
+        if array[ptr] != 0:
+            array[ptr_positive], array[ptr] = array[ptr], array[ptr_positive]
+            ptr_positive += 1
+        ptr += 1
