@@ -12,19 +12,20 @@ class Node:
         self.value = value
 
 
-def reverse_linked_list(
+def delete_list_element(
     head: Node,
+    value: Any,
 ) -> Node:
-    if head.next is None:
-        return head
-
-    prev = None
+    headguard = Node(None)
+    headguard.next = head
+    prev = headguard
     curr = head
 
     while curr is not None:
-        next = curr.next
-        curr.next = prev
+        if curr.value == value:
+            prev.next = curr.next
+            break
         prev = curr
-        curr = next
+        curr = curr.next
 
-    return prev
+    return headguard.next

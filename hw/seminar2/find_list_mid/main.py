@@ -19,7 +19,7 @@ def find_list_mid(
     slow = head
 
     while fast is not None and fast.next is not None:
-        slow = slow.next
+        slow = slow.next  # type: ignore
         fast = fast.next.next
 
-    return slow
+    return slow  # type: ignore
