@@ -14,7 +14,7 @@ class Node:
         value: Any = None,
     ) -> None:
         """
-        Builds a _Node object for `Stack`.
+        Builds a Node object.
 
         Args:
             value (Any, optional): object to keep in `.value`. Defaults to
