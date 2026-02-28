@@ -122,6 +122,4 @@ def is_string_source(
         if stack.top == elem:
             stack.pop()
 
-    print(stack)
-
     return len(stack) == 0
