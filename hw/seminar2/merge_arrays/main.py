@@ -60,7 +60,7 @@ class OneLinkedList:
         self._tail = prev
 
     @property
-    def head(
+    def head_value(
         self
     ) -> int:
         if self._head is None:
@@ -117,7 +117,10 @@ def merge_lists(
     result = OneLinkedList()
 
     while (len(list1) > 0) or (len(list2) > 0):
-        if len(list1) <= 0 or len(list2) > 0 and list2.head < list2.head:
+        if (
+            len(list1) <= 0 or
+            len(list2) > 0 and list2.head_value < list2.head_value
+        ):
             result.push_back(list2.pop_front())
         else:
             result.push_back(list1.pop_front())

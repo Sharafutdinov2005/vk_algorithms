@@ -27,4 +27,4 @@ def reverse_linked_list(
         prev = curr
         curr = next
 
-    return prev
+    return prev  # type: ignore
